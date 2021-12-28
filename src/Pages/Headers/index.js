@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
+import 'animate.css';
+
 import logo from '../../Img/Shared/Logo.png';
 import hamburger from '../../Img/Shared/icon-hamburger.png';
 import exit from '../../Img/Shared/Exit.png';
@@ -55,6 +57,7 @@ function Header() {
       
       { sideBar &&
         <BackSideBar>
+          <div class="animate__animated animate__bounceInRight"> 
           <DivButton>
             <Button
               onClick={()=> setSideBar(false)} 
@@ -62,12 +65,14 @@ function Header() {
               <img src={exit} style={{height: hamSize}}/>
             </Button>
           </DivButton>
+           
           <DivMenu>
               <TitleMenuHam>00 HOME</TitleMenuHam>
               <TitleMenuHam>01 DESTINATION</TitleMenuHam>
               <TitleMenuHam>02 CREW</TitleMenuHam>
               <TitleMenuHam>03 TECHNOLOGY</TitleMenuHam>
           </DivMenu>
+          </div>
         </BackSideBar>
       }
       

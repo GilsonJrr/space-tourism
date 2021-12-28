@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import 'animate.css';
 
 export const ContainerMobieleHeader = styled.div`
     display: flex;
@@ -53,6 +54,7 @@ export const TitleMenuHam = styled.div`
 `;
 
 export const BackSideBar = styled.div`
+    animation: animate__bounceInRight;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -61,7 +63,7 @@ export const BackSideBar = styled.div`
     right: 0px;
     top: 0px;
     background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(21.5485px);
+    backdrop-filter: blur(1rem);
 `;
 
 export const DivButton = styled.div`
