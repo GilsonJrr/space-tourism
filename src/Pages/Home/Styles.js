@@ -1,0 +1,135 @@
+import BackHomeMobile from '../../Img/Home/background-home-mobile.jpg';
+import BackHomeTablet from '../../Img/Home/background-home-tablet.jpg';
+import BackHomeDesktop from '../../Img/Home/background-home-desktop.jpg';
+import styled from 'styled-components';
+
+export const ContainerHome = styled.div`
+    background-color: #0B0D17;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(${BackHomeMobile});
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @media(min-width: 600px){
+        background-image: url(${BackHomeTablet});
+    }
+    @media(min-width: 900px){
+        background-image: url(${BackHomeDesktop});
+    }
+`;
+
+export const DivBody = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @media(min-width: 600px){
+
+    }
+    @media(min-width: 900px){
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-evenly;
+        height: 80%;
+    }
+`;
+
+export const TitleSmall = styled.div`
+    font-family: Barlow Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 2.7px;
+    color: #D0D6F9;
+    margin-bottom: 32px;
+    @media(min-width: 900px){
+        text-align: left;
+    }
+`;
+
+export const TitleBig = styled.div`
+    font-family: Bellefair;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 100px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 32px;
+    @media(min-width: 600px){
+        font-size: 150px;
+        margin-bottom: 62px;
+        margin-top: 30px;
+    }
+    @media(min-width: 900px){
+        text-align: left;
+    }
+`;
+
+export const MainText = styled.div`
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #D0D6F9;
+    @media(min-width: 900px){
+        text-align: left;
+    }
+`;
+
+export const DivText = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-top: 112px;
+    margin-left: 24px;
+    margin-right: 24px;
+    width: 80%;
+    max-width: 327px; 
+    align-self: center;
+    justify-content: space-between;
+    align-content: center;
+    @media(min-width: 600px){
+        width: 80%;
+        max-width: 450px;
+        margin-top: 132px; 
+    }
+    @media(min-width: 900px){
+
+    }
+`;
+
+export const CircleExplore = styled.div`
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background: #FFFFFF;
+    margin-top: 81px;
+    margin-bottom: 50px;
+    
+    font-family: Bellefair;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: #0B0D17;
+
+    @media(min-width: 900px){
+        width: 274px;
+        height: 274px;
+        font-size: 32px;
+        border-radius: 300px
+    }
+
+    border-radius: 100px
+`;
