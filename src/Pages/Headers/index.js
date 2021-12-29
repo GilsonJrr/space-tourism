@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Link, useHistory } from 'react-router-dom';
 
 import 'animate.css';
 
@@ -6,14 +7,23 @@ import logo from '../../Img/Shared/Logo.png';
 import hamburger from '../../Img/Shared/icon-hamburger.png';
 import exit from '../../Img/Shared/Exit.png';
 
-import {ContainerMobieleHeader, Button, LongerMenu, TitleMenu, BackSideBar, DivButton, DivMenu, TitleMenuHam} from './Styles';
+import {ContainerMobieleHeader, Button, LongerMenu, TitleMenu, BackSideBar, DivButton, DivMenu, TitleMenuHam, Linha, Img, Selectd} from './Styles';
 
 function Header() {
 
-  const [screen, setScreen] = useState(window.innerWidth);
+  const history = useHistory();
 
+  const [menu, setMenu] = useState ([
+    {id: 1, tilte: 'HOME', link: "/"},
+    {id: 2, tilte: 'DESTINATION', link: "/Destination"},
+    {id: 3, tilte: 'CREW', link: "/Crew"},
+    {id: 4, tilte: 'TECHNOLOGY', link: "/Technology"},
+  ])
+
+  const [screen, setScreen] = useState(window.innerWidth);
   const [hamSize, setHamSize] = useState(21)
   const [sideBar, setSideBar] = useState(false)
+  const [page, setPage] = useState('')
 
   const updateMedia = () => {
     setScreen(window.innerWidth);
@@ -27,21 +37,10 @@ function Header() {
   return (
     <ContainerMobieleHeader>
 
-        <img src={logo}/>
+        <Img src={logo}/>
 
       <div>
-        {screen  >= 601 ?
-          <div>
-            <LongerMenu>
-              <Button>
-                <TitleMenu>HOME</TitleMenu>
-              </Button>
-              <TitleMenu>DESTINATION</TitleMenu>
-              <TitleMenu>CREW</TitleMenu>
-              <TitleMenu>TECHNOLOGY</TitleMenu>
-            </LongerMenu>
-          </div>
-          :
+        {screen  < 600 &&
           <div>
             { sideBar === false &&
             <Button
@@ -50,15 +49,46 @@ function Header() {
               onMouseOut={()=> setHamSize(21)} 
               style={{cursor:'pointer'}}>
               <img src={hamburger} style={{height: hamSize}}/>
-            </Button>
-            }
+            </Button>}
           </div>
+        }
+        {screen  >= 600 && screen < 900 &&
+          <LongerMenu>
+            {menu.map((item) => {
+              return(
+                <Menu
+                  id={item.id}
+                  link={item.link}
+                  tilte={item.tilte}
+                  page={page}
+                  setPage={setPage}
+                  history={history}
+                />
+              );
+            })}
+          </LongerMenu>
+        }
+        {screen  > 900 &&
+          <LongerMenu>
+          <Linha/>
+            {menu.map((item) => {
+              return(
+                <Menu
+                  id={item.id}
+                  link={item.link}
+                  tilte={item.tilte}
+                  page={page}
+                  setPage={setPage}
+                  history={history}
+                />
+              );
+            })}
+          </LongerMenu>
         }
       </div>
       
       { sideBar &&
         <BackSideBar>
-          <div class="animate__animated animate__bounceInRight"> 
           <DivButton>
             <Button
               onClick={()=> setSideBar(false)} 
@@ -68,12 +98,19 @@ function Header() {
           </DivButton>
            
           <DivMenu>
-              <TitleMenuHam>00 HOME</TitleMenuHam>
-              <TitleMenuHam>01 DESTINATION</TitleMenuHam>
-              <TitleMenuHam>02 CREW</TitleMenuHam>
-              <TitleMenuHam>03 TECHNOLOGY</TitleMenuHam>
+            {menu.map((item) => {
+              return(
+                <SideBar
+                  id={item.id}
+                  link={item.link}
+                  tilte={item.tilte}
+                  page={page}
+                  setPage={setPage}
+                  history={history}
+                />
+              );
+            })}
           </DivMenu>
-          </div>
         </BackSideBar>
       }
       
@@ -83,3 +120,34 @@ function Header() {
 }
 
 export default Header;
+
+export function Menu (props){
+
+  function HandleMenu (){
+    props.setPage(props.id)
+    setTimeout(() => {
+      props.history.push(props.link)
+      props.setPage(props.id)
+    }, 500);
+  }
+
+  return(
+    <Button onClick={HandleMenu} >
+      
+      <TitleMenu>{props.tilte}</TitleMenu>
+      { props.page === props.id && <Selectd/> }
+      { props.page !== props.id && <div style={{marginTop: 35}}/> }
+      
+    </Button>
+  )
+}
+
+export function SideBar (props){
+  return(
+    <Button onClick={()=> props.history.push(props.link)} style={{cursor: 'pointer'}}>
+      
+      <TitleMenuHam>0{props.id-1} {props.tilte}</TitleMenuHam>
+      
+    </Button>
+  )
+}

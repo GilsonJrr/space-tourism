@@ -1,17 +1,7 @@
-import logo from './logo.svg';
-import BackHomeMobile from './Img/Home/background-home-mobile.jpg'
+import Routes from "./Routes";
 
-import Home from './Pages/Home';
-import Destination from './Pages/Destination';
-import Crew from './Pages/Crew';
-import Technology from './Pages/Technology';
-
-function App() {
+export default function App() {
   return (
-    <div>
-      <Technology/>
-    </div>
+    <Routes/>
   );
 }
-
-export default App;
