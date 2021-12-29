@@ -10,12 +10,13 @@ import {ContainerMobieleHeader, Button, LongerMenu, TitleMenu, BackSideBar, DivB
 
 function Header() {
 
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 600);
+  const [screen, setScreen] = useState(window.innerWidth);
+
   const [hamSize, setHamSize] = useState(21)
   const [sideBar, setSideBar] = useState(false)
 
   const updateMedia = () => {
-    setDesktop(window.innerWidth > 600);
+    setScreen(window.innerWidth);
   };
 
   useEffect(() => {
@@ -29,7 +30,7 @@ function Header() {
         <img src={logo}/>
 
       <div>
-        {isDesktop ? (
+        {screen  >= 601 ?
           <div>
             <LongerMenu>
               <Button>
@@ -40,7 +41,7 @@ function Header() {
               <TitleMenu>TECHNOLOGY</TitleMenu>
             </LongerMenu>
           </div>
-        ) : (
+          :
           <div>
             { sideBar === false &&
             <Button
@@ -52,7 +53,7 @@ function Header() {
             </Button>
             }
           </div>
-        )}
+        }
       </div>
       
       { sideBar &&
