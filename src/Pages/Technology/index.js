@@ -5,7 +5,7 @@ import {Container, TitleSmall, Image, DivImg , MainText, DivText, DivBody,
 
 import { Data } from './Data';
 
-function Technology() {
+function Technology() { 
 
   const [select, setSelect] = useState (0)
   const [screen, setScreen] = useState(window.innerWidth);
@@ -34,7 +34,7 @@ function Technology() {
               <Image src={Data[select].img}/>
             }
           </DivImg>
-
+          
           <DivText>
             <div>
               <DivMenu>

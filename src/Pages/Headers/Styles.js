@@ -9,7 +9,7 @@ export const ContainerMobieleHeader = styled.div`
     justify-content: space-between;
     align-items: center;
     padding-top: 24px;
-    width: 100vw;
+    width: 100%;
     @media(min-width: 600px){
         padding-top: 0px;
         width: 100%;
@@ -102,6 +102,7 @@ export const DivMenu = styled.div`
 export const Linha = styled.div`
     position: absolute;
     width: 60%;
+    max-width: 473px;
     height: 1px;
     right: 90%;
     top: 50%;

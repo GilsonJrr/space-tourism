@@ -9,15 +9,15 @@ export const Container = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(${BackMobile});
-    height: 100%;
-    max-height: 100%;
+    //height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding-bottom: 100px;
     @media(min-width: 600px){
         background-image: url(${BackTablet});
-        height: 100%;
+        //height: 100%;
     }
     @media(min-width: 900px){
         background-image: url(${BackDesktop});
@@ -30,6 +30,7 @@ export const DivBody = styled.div`
     align-items: center;
     flex-direction: column;
     margin-top: 100px;
+    //height: 100%;
     @media(min-width: 600px){
 
     }

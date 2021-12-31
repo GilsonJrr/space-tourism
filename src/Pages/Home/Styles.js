@@ -9,13 +9,12 @@ export const ContainerHome = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(${BackHomeMobile});
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     @media(min-width: 600px){
         background-image: url(${BackHomeTablet});
-        height: 100%;
+        //height: 100%;
     }
     @media(min-width: 900px){
         background-image: url(${BackHomeDesktop});

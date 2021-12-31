@@ -9,7 +9,7 @@ export const Container = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(${BackMobile});
-    height: 100%;
+    //height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@ export const DivBody = styled.div`
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    //height: 100vh;
     @media(min-width: 600px){
         flex-direction: column-reverse;
         height: 100%;
@@ -173,7 +173,7 @@ export const DivText = styled.div`
     width: 80%;
     max-width: 327px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 50%;
     @media(min-width: 600px){
         width: 90%;
@@ -255,7 +255,7 @@ export const Selectd = styled.div`
 export const UnSelectd = styled.div`
     width: 10px;
     height: 10px;
-    background: #FFFFFF;
+    background: #41434C;
     border-radius: 50px;
-    opacity: 0.17;
+    //opacity: 0.17;
 `;

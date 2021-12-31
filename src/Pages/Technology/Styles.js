@@ -10,18 +10,18 @@ export const Container = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(${BackMobile});
-    height: 100%;
     width: 100%; 
     display: flex;
     flex-direction: column;
     @media(min-width: 600px){
         background-image: url(${BackTablet});
         height: 100%;
-        max-height: 1024px;
+        //max-height: 1024px;
     }
     @media(min-width: 900px){
         background-image: url(${BackDesktop});
         height: 100vh;
+        //width: 100%; 
     }
 `;
 
@@ -30,12 +30,13 @@ export const DivBody = styled.div`
     align-items: center;
     flex-direction: column;
     width: 100%;
+    @media(min-width: 600px){
+        margin-top: 200px;
+    }
     @media(min-width: 900px){
-        width: 100%;
+        margin-top: 120px;
         flex-direction: row-reverse;
-        justify-content: flex-end;
-        height: 100%;
-        margin-bottom: 15%;
+        height: 100vh;
     }
 `;
 
@@ -49,28 +50,34 @@ export const TitleSmall = styled.div`
     letter-spacing: 2.7px;
     color: #D0D6F9;
     margin-bottom: 32px;
-    width: 100%;
+    margin-top: 100px;
     @media(min-width: 600px){
-        width: 50%;
-        margin-top: 40px;
+        position: absolute;
+        left: 38.5px;
+        top: 136px;
         font-size: 20px;
         line-height: 24px;
+        margin-top: 0px;
     }
     @media(min-width: 900px){
-        width: 30%;
+        position: absolute;
+        left: 166.5px;
+        top: 212px;
         font-size: 28px;
         line-height: 34px;
-        margin-top: 120px;
     }
 `;
 
 export const Image = styled.img`
     height: 100%;
     width: 100%;
-    align-self: center;
+    @media(min-width: 600px){
+        height: auto;
+        width: auto;
+    }
     @media(min-width: 900px){
         height: auto;
-        width: 450px;
+        width: auto;
     }
 `;
 
@@ -78,14 +85,39 @@ export const DivImg = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    width: 100%;
     @media(min-width: 600px){
-        height: 50%;
+        //height: 60%;
     }
     @media(min-width: 900px){
-        position: absolute;
-        top: 30%;
-        right: 0px;
+        flex-direction: row;
+        width: 40%;
+        justify-content: flex-end;
+        align-content: flex-end;
+        align-items: flex-end;
     }
+`;
+
+export const MainText = styled.div`
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #D0D6F9;
+    margin-bottom: 100px;
+    @media(min-width: 600px){
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    @media(min-width: 900px){
+        text-align: left;
+        width: 470px;
+    } 
 `;
 
 export const TextMenu = styled.div`
@@ -109,29 +141,8 @@ export const DivMenu = styled.div`
     }
     @media(min-width: 900px){
         flex-direction: column;
-        margin-right: 180px;
-        margin-left: 30%;
-    }
-`;
-
-export const MainText = styled.div`
-    font-family: Barlow;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 25px;
-    text-align: center;
-    color: #D0D6F9;
-    @media(min-width: 600px){
-        font-family: Barlow;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 28px;
-    }
-    @media(min-width: 900px){
-        text-align: left;
-        width: 440px;
+        margin-right: 80px;
+        //margin-left: 30%;
     }
 `;
 
@@ -139,23 +150,12 @@ export const DivText = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    margin-left: 24px;
-    margin-right: 24px;
     width: 80%;
-    max-width: 327px;
     align-items: center;
-    justify-content: space-between;
     height: 50%;
-    @media(min-width: 600px){
-        width: 90%;
-        max-width: 573px;
-        align-items: center;
-    }
     @media(min-width: 900px){
         flex-direction: row;
-        width: 100%;
-        max-width: 1000px;
-        justify-content: flex-start;
+        width: 50%;
     }
 `;
 
@@ -167,9 +167,9 @@ export const Tech = styled.div`
     line-height: 18px;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #D0D6F9;
     mix-blend-mode: normal;
-    opacity: 0.5;
+    //opacity: 0.5;
     margin-bottom: 8px;
     @media(min-width: 600px){
         font-size: 24px;
@@ -242,8 +242,9 @@ export const UnSelectd = styled.div`
     height: 40px;
     background: #000;
     border-radius: 50px;
-    opacity: 0.17;
-    border: 1px solid #FFFFFF;
+    //opacity: 0.17;
+    border: 1px solid #41434C;
+;
     justify-content: center;
     align-items: center;
 
