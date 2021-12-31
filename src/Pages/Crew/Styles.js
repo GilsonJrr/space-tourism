@@ -9,7 +9,7 @@ export const Container = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(${BackMobile});
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -19,6 +19,7 @@ export const Container = styled.div`
         align-content: space-between;
     }
     @media(min-width: 900px){
+        height: 100vh;
         background-image: url(${BackDesktop});
         justify-content: baseline;
     }
@@ -78,7 +79,7 @@ export const Image = styled.img`
     align-self: center;
     @media(min-width: 600px){
         height: auto;
-        width: 300px;
+        width: auto;
     }
     @media(min-width: 900px){
         height: auto;
@@ -107,7 +108,6 @@ export const DivImg = styled.div`
     @media(min-width: 600px){
         flex-direction: column-reverse;
         height: 50%;
-        height: 70%;
     }
     @media(min-width: 900px){
         width: 40%;

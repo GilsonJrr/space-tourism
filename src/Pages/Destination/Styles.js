@@ -17,7 +17,7 @@ export const Container = styled.div`
     justify-content: flex-end;
     @media(min-width: 600px){
         background-image: url(${BackTablet});
-        height: 100vh;
+        height: 100%;
     }
     @media(min-width: 900px){
         background-image: url(${BackDesktop});
