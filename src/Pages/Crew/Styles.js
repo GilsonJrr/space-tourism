@@ -9,7 +9,7 @@ export const Container = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(${BackMobile});
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@ export const DivBody = styled.div`
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     @media(min-width: 600px){
         flex-direction: column-reverse;
         height: 100%;
