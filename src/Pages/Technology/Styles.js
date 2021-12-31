@@ -10,6 +10,7 @@ export const Container = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(${BackMobile});
+    //height: 100%;
     width: 100%; 
     display: flex;
     flex-direction: column;
@@ -115,6 +116,7 @@ export const MainText = styled.div`
         line-height: 28px;
     }
     @media(min-width: 900px){
+        margin-bottom: 10px;
         text-align: left;
         width: 470px;
     } 

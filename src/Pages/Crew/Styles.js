@@ -84,7 +84,7 @@ export const Image = styled.img`
     }
     @media(min-width: 900px){
         height: auto;
-        width: auto;
+        width: 100%;
     }
 `;
 
@@ -111,7 +111,9 @@ export const DivImg = styled.div`
         height: 50%;
     }
     @media(min-width: 900px){
-        width: 40%;
+        align-items: center;
+        //justify-content: right;
+        width: 30%;
         margin-top: 0px;
     }
 `;
@@ -160,7 +162,7 @@ export const MainText = styled.div`
     @media(min-width: 900px){
         text-align: left;
         width: 440px;
-        margin-bottom: 100px;
+        margin-bottom: 60px;
     }
 `;
 
@@ -186,7 +188,8 @@ export const DivText = styled.div`
         height: 30%;
     }
     @media(min-width: 900px){
-        width: 40%;
+        width: 50%;
+        //height: 100%;
         max-width: 1000px;
         margin-top: 0px;
         align-items: flex-start;
