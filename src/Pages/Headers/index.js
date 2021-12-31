@@ -48,7 +48,7 @@ function Header() {
               onMouseOver={()=> setHamSize(25)} 
               onMouseOut={()=> setHamSize(21)} 
               style={{cursor:'pointer'}}>
-              <img src={hamburger} style={{height: hamSize}}/>
+              <img src={hamburger} style={{height: hamSize, marginRight: 24}}/>
             </Button>}
           </div>
         }
@@ -107,6 +107,7 @@ function Header() {
                   page={page}
                   setPage={setPage}
                   history={history}
+                  setSideBar={setSideBar}
                 />
               );
             })}
@@ -124,11 +125,8 @@ export default Header;
 export function Menu (props){
 
   function HandleMenu (){
+    props.history.push(props.link)
     props.setPage(props.id)
-    setTimeout(() => {
-      props.history.push(props.link)
-      props.setPage(props.id)
-    }, 500);
   }
 
   return(
@@ -136,15 +134,21 @@ export function Menu (props){
       
       <TitleMenu>{props.tilte}</TitleMenu>
       { props.page === props.id && <Selectd/> }
-      { props.page !== props.id && <div style={{marginTop: 35}}/> }
+      { props.page !== props.id && <div style={{marginTop: 35}}></div> }
       
     </Button>
   )
 }
 
 export function SideBar (props){
+
+  function HandleMenu (){
+    props.history.push(props.link)
+    props.setSideBar(false)
+  }
+
   return(
-    <Button onClick={()=> props.history.push(props.link)} style={{cursor: 'pointer'}}>
+    <Button onClick={HandleMenu} style={{cursor: 'pointer'}}>
       
       <TitleMenuHam>0{props.id-1} {props.tilte}</TitleMenuHam>
       

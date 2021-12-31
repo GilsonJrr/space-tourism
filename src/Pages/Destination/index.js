@@ -3,10 +3,6 @@ import React, {useState} from 'react';
 import {Container, TitleSmall, Image, DivImg ,TitleBig, MainText, DivText, Separation, DivBody, 
         DivMenu, TextMenu, InfoTilte, Info, DivInfo, DivInfoAll, Button, Selectd} from './Styles';
 
-import moon from '../../Img/Destination/image-moon.png'
-
-import Header from '../Headers';
-
 import { Data } from './Data';
 
 function Destination() {
@@ -14,9 +10,7 @@ function Destination() {
   const [select, setSelect] = useState (0)
 
   return (
-    <Container>
-       
-        <Header/>
+    <Container> 
 
         <DivBody>
 

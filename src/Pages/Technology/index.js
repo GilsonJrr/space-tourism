@@ -3,8 +3,6 @@ import React, {useState, useEffect} from 'react';
 import {Container, TitleSmall, Image, DivImg , MainText, DivText, DivBody, 
         DivMenu, TextMenu, Tech, Name, Button, Selectd, UnSelectd} from './Styles';
 
-import Header from '../Headers';
-
 import { Data } from './Data';
 
 function Technology() {
@@ -23,8 +21,6 @@ function Technology() {
 
   return (
     <Container>
-       
-        <Header/>
 
         <TitleSmall> 03 SPACE LAUNCH 101 </TitleSmall>
 

@@ -9,15 +9,19 @@ export const ContainerHome = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(${BackHomeMobile});
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     @media(min-width: 600px){
         background-image: url(${BackHomeTablet});
+        height: 100%;
     }
     @media(min-width: 900px){
         background-image: url(${BackHomeDesktop});
+        align-items: space-between;
+        justify-content: flex-end;
+        height: 100vh;
     }
 `;
 
@@ -30,9 +34,10 @@ export const DivBody = styled.div`
     }
     @media(min-width: 900px){
         flex-direction: row;
-        align-items: baseline;
-        justify-content: space-evenly;
-        height: 80%;
+        justify-content: space-between;
+        height: 70%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 `;
 
@@ -80,13 +85,14 @@ export const MainText = styled.div`
     color: #D0D6F9;
     @media(min-width: 900px){
         text-align: left;
+        width: 95%;
     }
 `;
 
 export const DivText = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 112px;
+    margin-top: 120px;
     margin-left: 24px;
     margin-right: 24px;
     width: 80%;
@@ -97,10 +103,11 @@ export const DivText = styled.div`
     @media(min-width: 600px){
         width: 80%;
         max-width: 450px;
-        margin-top: 132px; 
+        margin-top: 150px; 
     }
     @media(min-width: 900px){
-
+        margin-top: 0px;
+        width: 450px;
     }
 `;
 
@@ -128,6 +135,7 @@ export const CircleExplore = styled.div`
         width: 274px;
         height: 274px;
         font-size: 32px;
+        margin-top: 91px;
         border-radius: 300px
     }
 

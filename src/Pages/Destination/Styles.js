@@ -9,15 +9,19 @@ export const Container = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(${BackMobile});
-    height: 100vh;
+    height: 100%;
+    max-height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     @media(min-width: 600px){
         background-image: url(${BackTablet});
+        height: 100vh;
     }
     @media(min-width: 900px){
         background-image: url(${BackDesktop});
+        height: 100vh;
     }
 `;
 
@@ -25,6 +29,7 @@ export const DivBody = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 100px;
     @media(min-width: 600px){
 
     }
@@ -218,6 +223,7 @@ export const DivInfo = styled.div`
     flex-direction: column;
     margin-left: 30px;
     margin-right: 30px;
+    margin-bottom: 20px;
     @media(min-width: 900px){
         margin-left: 0px;
         margin-right: 60px;

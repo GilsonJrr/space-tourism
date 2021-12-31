@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 import {Container, TitleSmall, Image, DivImg , MainText, DivText, Separation, DivBody, 
         DivMenu, TextMenu, Position, Name, Button, Selectd, UnSelectd} from './Styles';
 
-import Header from '../Headers';
 
 import { Data } from './Data';
 
@@ -12,9 +11,7 @@ function Crew() {
   const [select, setSelect] = useState (0)
 
   return (
-    <Container>
-       
-        <Header/>
+    <Container> 
 
         <TitleSmall> 02 MEET YOUR CREW </TitleSmall>
 

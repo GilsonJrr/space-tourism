@@ -15,9 +15,12 @@ export const Container = styled.div`
     flex-direction: column;
     @media(min-width: 600px){
         background-image: url(${BackTablet});
+        justify-content: flex-end;
+        align-content: space-between;
     }
     @media(min-width: 900px){
         background-image: url(${BackDesktop});
+        justify-content: baseline;
     }
 `;
 
@@ -28,12 +31,16 @@ export const DivBody = styled.div`
     width: 100%;
     @media(min-width: 600px){
         flex-direction: column-reverse;
+        height: 100%;
+        margin-top: 100px;
     }
     @media(min-width: 900px){
+        margin-top: 0px;
         width: 100%;
         flex-direction: row-reverse;
-        justify-content: flex-end;
-        height: 80%;
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 100%;
     }
 `;
 
@@ -47,18 +54,21 @@ export const TitleSmall = styled.div`
     letter-spacing: 2.7px;
     color: #D0D6F9;
     margin-bottom: 32px;
-    width: 100%;
+    margin-top: 100px;
     @media(min-width: 600px){
-        width: 50%;
-        margin-top: 40px;
+        position: absolute;
+        left: 38.5px;
+        top: 136px;
         font-size: 20px;
         line-height: 24px;
+        margin-top: 0px;
     }
     @media(min-width: 900px){
-        width: 30%;
+        position: absolute;
+        left: 166.5px;
+        top: 212px;
         font-size: 28px;
         line-height: 34px;
-        margin-top: 120px;
     }
 `;
 
@@ -67,14 +77,12 @@ export const Image = styled.img`
     width: 200px;
     align-self: center;
     @media(min-width: 600px){
-        position: absolute;
         height: auto;
         width: 300px;
-        bottom: 0px;
     }
     @media(min-width: 900px){
         height: auto;
-        width: 450px;
+        width: auto;
     }
 `;
 
@@ -99,12 +107,11 @@ export const DivImg = styled.div`
     @media(min-width: 600px){
         flex-direction: column-reverse;
         height: 50%;
+        height: 70%;
     }
     @media(min-width: 900px){
-        position: absolute;
-        width: 50%;
-        bottom: 0px;
-        right: 50px;
+        width: 40%;
+        margin-top: 0px;
     }
 `;
 
@@ -172,12 +179,16 @@ export const DivText = styled.div`
         margin-top: 120px; 
         align-items: center;
         flex-direction: column-reverse;
+        align-self: center;
+        margin-bottom: 20px;
+        height: 30%;
     }
     @media(min-width: 900px){
-        width: 100%;
+        width: 40%;
         max-width: 1000px;
-        margin-top: 100px;
+        margin-top: 0px;
         align-items: flex-start;
+        justify-content: flex-end;
         margin-left: 8%;
     }
 `;
