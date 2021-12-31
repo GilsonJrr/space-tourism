@@ -9,7 +9,7 @@ export const Container = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(${BackMobile});
-    height: 100%;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -30,6 +30,7 @@ export const DivBody = styled.div`
     align-items: center;
     flex-direction: column;
     width: 100%;
+    height: 100%;
     @media(min-width: 600px){
         flex-direction: column-reverse;
         height: 100%;
@@ -148,6 +149,7 @@ export const MainText = styled.div`
     line-height: 25px;
     text-align: center;
     color: #D0D6F9;
+    margin-bottom: 100px;
     @media(min-width: 600px){
         font-family: Barlow;
         font-style: normal;

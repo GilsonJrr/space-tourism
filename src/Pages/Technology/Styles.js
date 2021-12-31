@@ -10,15 +10,18 @@ export const Container = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(${BackMobile});
-    height: 100vh;
+    height: 100%;
     width: 100%; 
     display: flex;
     flex-direction: column;
     @media(min-width: 600px){
         background-image: url(${BackTablet});
+        height: 100%;
+        max-height: 1024px;
     }
     @media(min-width: 900px){
         background-image: url(${BackDesktop});
+        height: 100vh;
     }
 `;
 
