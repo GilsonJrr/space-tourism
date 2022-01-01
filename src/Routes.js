@@ -11,7 +11,6 @@ const Routes = () => {
     <BrowserRouter>
       <Header/>
         <Switch>
-          
           <Route exact path="/" component={Home}/>
           <Route path="/Destination" component={Destination}/>
           <Route path="/Crew" component={Crew}/>

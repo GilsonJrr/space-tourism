@@ -84,7 +84,7 @@ export const Image = styled.img`
     }
     @media(min-width: 900px){
         height: auto;
-        width: 100%;
+        width: 70%;
     }
 `;
 
@@ -206,9 +206,9 @@ export const Position = styled.div`
     line-height: 18px;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #D0D6F9;
     mix-blend-mode: normal;
-    opacity: 0.5;
+    //opacity: 0.5;
     margin-bottom: 8px;
     @media(min-width: 600px){
         font-size: 24px;

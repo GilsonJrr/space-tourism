@@ -23,7 +23,7 @@ function Header() {
   const [screen, setScreen] = useState(window.innerWidth);
   const [hamSize, setHamSize] = useState(21)
   const [sideBar, setSideBar] = useState(false)
-  const [page, setPage] = useState(1)
+  const [page, setPage] = useState('')
 
   const updateMedia = () => {
     setScreen(window.innerWidth);

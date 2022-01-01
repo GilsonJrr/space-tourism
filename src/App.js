@@ -6,4 +6,4 @@ export default function App() {
   );
 }
 
-//TODO: colocar o headers junto do routers
+//TODO: Ultima coisa, atualizacao da pagina voltar pro home ver isso
