@@ -3,7 +3,7 @@ import {ContainerHome, TitleSmall, TitleBig, MainText, DivText, CircleExplore, D
 
 function Home() {
   return (
-    <ContainerHome>
+    <ContainerHome role="main">
 
         <DivBody>
 

@@ -2,8 +2,8 @@ import Routes from "./Routes";
 
 export default function App() {
   return (
-    <Routes/>
+    <Routes role="main"/>
   );
 }
 
-//TODO: Ultima coisa, atualizacao da pagina voltar pro home ver isso
+//TODO: cores e tamanho das fontes

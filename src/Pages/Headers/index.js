@@ -11,7 +11,7 @@ import {ContainerMobieleHeader, Button, LongerMenu, TitleMenu, BackSideBar, DivB
 
 function Header() {
 
-  const history = useHistory();
+  const history = useHistory(); 
 
   const [menu, setMenu] = useState ([
     {id: 1, tilte: 'HOME', link: "/"},
@@ -80,6 +80,7 @@ function Header() {
                   page={page}
                   setPage={setPage}
                   history={history}
+                  screen={screen}
                 />
               );
             })}
@@ -132,7 +133,13 @@ export function Menu (props){
   return(
     <Button onClick={HandleMenu} >
       
-      <TitleMenu>{props.tilte}</TitleMenu>
+      <TitleMenu>
+        {props.screen  > 900 &&
+        <TitleMenu style={{fontWeight: 'bold'}}>
+          0{props.id-1}  
+        </TitleMenu> }
+        {props.tilte}
+      </TitleMenu>
       { props.page === props.id && <Selectd/> }
       { props.page !== props.id && <div style={{marginTop: 35}}></div> }
       
@@ -150,7 +157,12 @@ export function SideBar (props){
   return(
     <Button onClick={HandleMenu} style={{cursor: 'pointer'}}>
       
-      <TitleMenuHam>0{props.id-1} {props.tilte}</TitleMenuHam>
+      <TitleMenuHam>
+        <TitleMenuHam style={{fontWeight: 'bold', fontSize: 16}}>
+          0{props.id-1}  
+        </TitleMenuHam> 
+        {props.tilte}
+      </TitleMenuHam>
       
     </Button>
   )

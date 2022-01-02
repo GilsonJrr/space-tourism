@@ -18,7 +18,7 @@ function Crew() {
         <DivBody>
 
           <DivImg>
-            <Image src={Data[select].img}/>
+            <Image alt="CrewImages" src={Data[select].img}/>
             <Separation/>
           </DivImg>
 

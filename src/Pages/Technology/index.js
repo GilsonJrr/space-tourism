@@ -29,9 +29,9 @@ function Technology() {
           <DivImg>
             {
               screen >= 900 ?
-              <Image src={Data[select].imgWeb}/>
+              <Image alt="TechImagesWeb" src={Data[select].imgWeb}/>
               :
-              <Image src={Data[select].img}/>
+              <Image alt="TechImages" src={Data[select].img}/>
             }
           </DivImg>
           

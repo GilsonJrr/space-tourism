@@ -36,7 +36,7 @@ export const LongerMenu = styled.div`
     height: 96px;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(81.5485px);
-    margin-top: -24px;
+    //margin-top: -24px;
     @media(min-width: 900px){
         width: 1000px;
         min-width: 830px;
@@ -54,6 +54,8 @@ export const Img = styled.img`
 `;
 
 export const TitleMenu = styled.div`
+    display: flex;
+    margin-right: 11px;
     font-family: Barlow Condensed;
     font-style: normal;
     font-weight: normal;
@@ -64,14 +66,17 @@ export const TitleMenu = styled.div`
 `;
 
 export const TitleMenuHam = styled.div`
+    display: flex;
     font-family: Barlow Condensed;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 20px;
     line-height: 20px;
-    letter-spacing: 2.3625px;
+    letter-spacing: 2.7px;
+    text-align: center;
     color: #FFFFFF;
-    margin-top: 40px;
+    margin-right: 11px;
+    margin-bottom: 20px;
 `;
 
 export const BackSideBar = styled.div`
@@ -116,5 +121,5 @@ export const Selectd = styled.div`
     width: 100%;
     height: 3px;
     background: #FFFFFF;
-    margin-top: 35px;
+    margin-top: 32px;
 `;

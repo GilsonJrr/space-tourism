@@ -17,7 +17,7 @@ function Destination() {
           <DivImg>
             <TitleSmall> 01 PICK YOUR DESTINATION </TitleSmall>
 
-            <Image src={Data[select].img}/>
+            <Image alt="DestinationImages" src={Data[select].img}/>
           </DivImg>
 
           <DivText>
