@@ -10,7 +10,7 @@ function Destination() {
   const [select, setSelect] = useState (0)
 
   return (
-    <Container> 
+    <Container role="main"> 
 
         <DivBody>
 

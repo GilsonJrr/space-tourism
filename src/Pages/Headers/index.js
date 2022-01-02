@@ -35,9 +35,9 @@ function Header() {
   });
 
   return (
-    <ContainerMobieleHeader>
+    <ContainerMobieleHeader role="main">
 
-        <Img src={logo}/>
+        <Img alt="logo" src={logo}/>
 
       <div>
         {screen  < 600 &&
@@ -48,7 +48,7 @@ function Header() {
               onMouseOver={()=> setHamSize(25)} 
               onMouseOut={()=> setHamSize(21)} 
               style={{cursor:'pointer'}}>
-              <img src={hamburger} style={{height: hamSize, marginRight: 24}}/>
+              <img alt="ham" src={hamburger} style={{height: hamSize, marginRight: 24}}/>
             </Button>}
           </div>
         }
@@ -94,7 +94,7 @@ function Header() {
             <Button
               onClick={()=> setSideBar(false)} 
               style={{cursor:'pointer'}}>
-              <img src={exit} style={{height: hamSize}}/>
+              <img alt="exit" src={exit} style={{height: hamSize}}/>
             </Button>
           </DivButton>
            

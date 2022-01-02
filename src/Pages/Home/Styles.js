@@ -40,7 +40,7 @@ export const DivBody = styled.div`
     }
 `;
 
-export const TitleSmall = styled.div`
+export const TitleSmall = styled.h1`
     font-family: Barlow Condensed;
     font-style: normal;
     font-weight: normal;
