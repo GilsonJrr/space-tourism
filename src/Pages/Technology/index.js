@@ -20,7 +20,7 @@ function Technology() {
   });
 
   return (
-    <Container role="main">
+    <Container role="Technology">
 
         <TitleSmall> 03 SPACE LAUNCH 101 </TitleSmall>
 

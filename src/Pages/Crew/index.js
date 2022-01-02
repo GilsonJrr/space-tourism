@@ -11,7 +11,7 @@ function Crew() {
   const [select, setSelect] = useState (0)
 
   return (
-    <Container role="main"> 
+    <Container role="Crew"> 
 
         <TitleSmall> 02 MEET YOUR CREW </TitleSmall>
 
